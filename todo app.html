@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+        }
+
+        span {
+            margin-right: 70%
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section id="todo">
+        <input id="input">
+        <button id="button">Add</button>
+    </section>
+    <div id="todos">
+
+    </div>
+
+    <script>
+        let todolist = [];
+
+
+        const todoEl = document.getElementById("todo");
+        const inputEl = document.getElementById("input");
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", function (event) {
+            const div = document.createElement("div");
+            const p = document.createElement("p");
+
+            p.innerHTML = inputEl.value;
+
+
+            p.addEventListener("click", function () {
+                p.style.textDecoration = "line-through";
+
+            })
+            div.appendChild(p);
+
+            const span = document.createElement("span");
+            span.innerHTML = "*";
+            span.addEventListener("click", function () {
+                div.parentElement.removeChild(div);
+
+
+
+
+            });
+            div.appendChild(span);
+            todoEl.appendChild(div);
+            inputEl.value = " ";
+
+
+            localStorage.setItem("todos", json.stringify(todolist));
+
+        });
+        function loadpreviousTodos() {
+            const previusTodos = json.parse(localStorage.getItem("todos"));
+            previusTodos.forEach(function (todo) {
+                todo(todo.text);
+
+            });
+        }
+        loadpreviousTodos();
+
+
+
+
+    </script>
+</body>
+
+</html>

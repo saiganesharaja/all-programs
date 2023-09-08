@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="Add">+</button>
+        <p id="dsp"> 0</p>
+        <button id="Sub">-</button>
+    </div>
+    <script>
+        let counter = 0;
+        const dspEl = document.getElementById("dsp");
+        const AddEl = document.getElementById("Add");
+        const SubEl = document.getElementById("Sub");
+        function inc() {
+            counter += +1;
+            dspEl.innerHTML = counter;
+        }
+        function dec() {
+            counter += -1;
+            dspEl.innerHTML = counter;
+        }
+        AddEl.addEventListener("click", inc);
+        SubEl.addEventListener("click", dec);
+    </script>
+</body>
+
+</html>

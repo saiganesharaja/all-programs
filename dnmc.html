@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="clr"></div>
+    <script>
+        const array = ["1", "2", "3", "/", "5", "6", "7", "*", "7", "8", "9", "-", "0", ".", "+", "=",];
+        console.log(array.length);
+        const calculatorElement = document.getElementById("clr");
+
+
+        let tableElement = document.createElement("table");
+        calculatorElement.appendChild(tableElement);
+
+        tableElement.border = 1;
+        tableElement.width = "200px";
+
+        let tablebody = document.createElement("tbody");
+
+        tableElement.appendChild(tablebody);
+
+        let tr = document.createElement("tr");
+        tablebody.appendChild(tr);
+
+        const displayel = document.createElement("td");
+        tr.appendChild(displayel);
+        displayel.colSpan = 3;
+        displayel.addEventListener("click", onclickdisplay);
+        const clear = document.createElement("td");
+        tr.appendChild(clear);
+        clear.innerHTML = "c";
+        clear.addEventListener("click", clear1);
+        b = 0;
+        for (let i = 0; i < 4; i++) {
+            let tr = document.createElement("tr");
+            tablebody.appendChild(tr);
+            for (let j = 0; j < 4; j++) {
+                var td = document.createElement("td");
+
+                td.innerHTML = array[b];
+                tr.appendChild(td);
+                b++;
+                if (td.innerHTML === array[15]) {
+                    td.addEventListener("click", equal);
+                }
+                else {
+                    addEventListener("click", onclickdisplay)
+                }
+            }
+        }
+        function onclickdisplay() {
+            const p = event.target.innerHTML;
+
+            displayel.innerHTML = displayel.innerHTML + p;
+            displayel.focus();
+        }
+
+        function equal() {
+            const q = eval(displayel.innerHTML);
+            displayel.innerHTML = q;
+            displayel.focus();
+        }
+
+        function clear1() {
+            displayel.innerHTML = "";
+        }
+
+
+    </script>
+</body>
+
+</html>

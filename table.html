@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="calculator"></div>
+</body>
+<script>
+    const calEl = document.getElementById("calculator");
+
+
+    const tableEl = document.createElement("table");
+    calEl.appendChild(tableEl);
+    tableEl.border = 1;
+
+    const rowEl = document.createElement("tr");
+    tableEl.appendChild(rowEl);
+
+    const dspEl = document.createElement("td");
+    rowEl.appendChild(dspEl);
+    dspEl.colSpan = "3";
+    dspEl.style.width = "120px";
+    dspEl.style.height = "10px";
+
+    const cleEl = document.createElement("td");
+    rowEl.appendChild(cleEl);
+    cleEl.innerHTML = "c";
+    cleEl.addEventListener("click", onClickcleEl);
+
+    const row = document.createElement("tr");
+    tableEl.appendChild(row);
+
+    const b1 = document.createElement("td");
+    row.appendChild(b1);
+    b1.innerHTML = "7";
+    b1.addEventListener("click", onclickHandlerCler);
+
+    const b2 = document.createElement("td");
+    row.appendChild(b2);
+    b2.innerHTML = "8";
+    b2.addEventListener("click", onclickHandlerCler);
+
+    const b3 = document.createElement("td");
+    row.appendChild(b3);
+    b3.innerHTML = "9";
+    b3.addEventListener("click", onclickHandlerCler);
+
+    const b4 = document.createElement("td");
+    row.appendChild(b4);
+    b4.innerHTML = "/";
+    b4.addEventListener("click", onclickHandlerCler);
+
+
+    const row2 = document.createElement("tr");
+    tableEl.appendChild(row2);
+
+    const ba1 = document.createElement("td");
+    row2.appendChild(ba1);
+    ba1.innerHTML = "4";
+    ba1.addEventListener("click", onclickHandlerCler);
+
+    const ba2 = document.createElement("td");
+    row2.appendChild(ba2);
+    ba2.innerHTML = "5";
+    ba2.addEventListener("click", onclickHandlerCler);
+
+    const ba3 = document.createElement("td");
+    row2.appendChild(ba3);
+    ba3.innerHTML = " 6";
+    ba3.addEventListener("click", onclickHandlerCler);
+
+    const ba4 = document.createElement("td");
+    row2.appendChild(ba4);
+    ba4.innerHTML = "*";
+    ba4.addEventListener("click", onclickHandlerCler);
+
+
+    const row3 = document.createElement("tr");
+    tableEl.appendChild(row3);
+
+    const bu1 = document.createElement("td");
+    row3.appendChild(bu1);
+    bu1.innerHTML = "1";
+    bu1.addEventListener("click", onclickHandlerCler);
+
+    const bu2 = document.createElement("td");
+    row3.appendChild(bu2);
+    bu2.innerHTML = "2";
+    bu2.addEventListener("click", onclickHandlerCler);
+
+    const bu3 = document.createElement("td");
+    row3.appendChild(bu3);
+    bu3.innerHTML = "3";
+    bu3.addEventListener("click", onclickHandlerCler);
+
+    const bu4 = document.createElement("td");
+    row3.appendChild(bu4);
+    bu4.innerHTML = "-";
+    bu4.addEventListener("click", onclickHandlerCler);
+
+
+
+    const row4 = document.createElement("tr");
+    tableEl.appendChild(row4);
+
+    const but1 = document.createElement("td");
+    row4.appendChild(but1);
+    but1.innerHTML = "+";
+    but1.addEventListener("click", onclickHandlerCler);
+
+    const but2 = document.createElement("td");
+    row4.appendChild(but2);
+    but2.innerHTML = ".";
+    but2.addEventListener("click", onclickHandlerCler);
+
+    const but3 = document.createElement("td");
+    row4.appendChild(but3);
+    but3.innerHTML = "0";
+    but3.addEventListener("click", onclickHandlerCler);
+
+    const but4 = document.createElement("td");
+    row4.appendChild(but4);
+    but4.innerHTML = "=";
+    but4.addEventListener("click", onClickeqaul);
+
+
+
+    function onclickHandlerCler(event) {
+        const p = event.target.innerHTML;
+        dspEl.innerHTML = dspEl.innerHTML + p;
+    }
+
+    function onClickeqaul() {
+        const q = eval(dspEl.innerHTML);
+        dspEl.innerHTML = q;
+    }
+
+    function onClickcleEl() {
+        dspEl.innerHTML = "";
+    }
+
+
+</script>
+
+</html>

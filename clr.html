@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+
+            
+            
+<style>
+  
+table{
+    height: 50px;
+
+    margin-top: 20%;
+    margin-left: 40%;
+    background-color: rgb(54, 54, 56);
+    
+    border-radius: 10px;
+    
+    
+    
+}
+input[type="button"]{
+   width:50px;
+
+    background-color:white;
+
+    border-radius:7px;
+    
+    height: 36px;
+    margin-left: 15%;
+    font-size: 25px;
+
+box-shadow: inset 0px 0px rgb(110, 57, 57)10, 57, 57
+}
+
+
+
+input[type="text"]{
+    font-size:20px;
+    text-align: right;
+    
+}
+.b1{
+    margin:10px 10px;
+    /* margin-top: 5px; */
+    width: 90%;
+    height:36px ;
+    border-radius: 5px;
+    background-color: rgb(123, 167, 137)
+    
+    
+}
+.clr{
+    height: 300px;
+}
+
+
+</style>
+
+    </head>
+    <body>
+    <table class="clr">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="result" value=""/>
+
+            </td>
+        </tr>
+        <tr>
+          <td>
+            <input  type="button" value="7"  onclick="clickHandler('7')"/> 
+           </td> 
+           <td>
+            <input type="button" value="8" onclick="clickHandler('8')"/> 
+           </td> 
+           <td>
+            <input type="button" value="9"onclick="clickHandler('9')"/>
+           </td> 
+           <td>
+            <input type="button" value="\" onclick="clickHandler('/')"/>
+           </td> 
+
+        </tr>
+        <tr>
+        <td>
+            <input  type="button" value="4"  onclick="clickHandler('4')"/> 
+           </td> 
+           <td>
+            <input type="button" value="5" onclick="clickHandler('5')"/>
+           </td> 
+           <td>
+            <input type="button" value="6" onclick="clickHandler('6')"/>
+           </td> 
+           <td>
+            <input type="button" value="*" onclick="clickHandler('*')">
+           </td> 
+
+      </tr>
+      <tr>
+      <td>
+        <input  type="button" value="1" onclick="clickHandler('1')"> 
+    </td> 
+    <td>
+     <input type="button" value="2"  onclick="clickHandler('2')">
+    </td> 
+    <td>
+     <input type="button" value="3"  onclick="clickHandler('3')">
+    </td> 
+    <td>
+     <input type="button" value="-"onclick="clickHandler('-')">
+    </td> 
+
+       </td> 
+       </tr>
+       <tr>
+        <td>
+            <input  type="button" value="0"  onclick="clickHandler('0')">
+           </td> 
+           <td>
+            <input type="button" value="c"  onclick="cler()">
+           </td>
+           <td>
+            <input type="button" value="+" onclick="clickHandler('+')">
+           </td> 
+            
+
+         </td> 
+         <td>
+          <input style="background-color:orange" type="button" class="b2" value="="  onclick="solve()">
+         </td> 
+         </tr>
+    </table>
+    <script src="script.js">
+
+
+
+    </script>
+  
+    </body>
+</html>
